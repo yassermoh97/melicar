@@ -24,7 +24,7 @@
         <!-- Signup -->
         <div class="row">
             <p class="col-xs-12 col-md-2 col-xl-2">
-                <button type="button" class="btn" id="signup">REGISTRARSE</button>
+                <button type="button" class="btn" id="signup" onclick="location.href='temp-registration.php'">REGISTRARSE</button>
             </p> 
         </div>
         
