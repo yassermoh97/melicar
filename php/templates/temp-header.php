@@ -47,10 +47,6 @@
                     </ul>
                 </div> 
             </div>
-        </nav>
-        
-        <!-- Llamada a archivos -->
-        <?php include 'temp-login.php'; ?>
-        <?php include 'temp-search.php'; ?>
+        </nav>   
     </div>
 </header>
