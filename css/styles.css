@@ -12,6 +12,10 @@
 html {
     overflow-x: hidden;
 }
+
+body {
+    background-color: #EEEEEE;
+}
 .navbar {
     background-image: linear-gradient(#A11414, #D72323);
     height: auto;
@@ -119,6 +123,7 @@ hr {
     font-size: 12px;
     background-color: #D72323;
     border: solid 3px #D72323;
+    font-weight: 600;
 }
 
 #signin:hover {
@@ -132,6 +137,7 @@ hr {
     font-size: 12px;
     background-color: #303841;
     border: solid 3px white;
+    font-weight: 600;
 }
 
 #signup:hover {
@@ -210,15 +216,16 @@ hr {
    height: 40px;
    margin-left: 25%;
    margin-top: 20px;
-   background-color: #D72323;
+   background-image: linear-gradient(#D72323, #A11414);
    color: white;
    font-size: 13px;
    box-shadow: 2px 2px 3px black;
+   font-weight: 600;
    border: none;
 }
 
 #search-btn:hover {
-    background-color: #A11414;
+    background-image: linear-gradient(#950F0F, #950F0F);
 }
 
 #mark-white {
@@ -242,16 +249,12 @@ hr {
 
 #welcome {
     margin-top: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 160px;
     width: 90%;
-    box-shadow: 3px 3px 8px black;
     margin-left: auto;
     margin-right: auto;
 }
 
-#body-welcome {
-    background-color: #EEEEEE;
-}
 
 #title-welcome {
     color: #D72323;
@@ -267,6 +270,7 @@ hr {
 ----------------------------------------------------------------
 ----------------------------------------------------------------*/
 
+/* Estilos aplicados a temp-footer.php */
 
 
 #page-footer {
@@ -276,7 +280,8 @@ hr {
     -webkit-box-shadow: 1px -1px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px -1px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 1px -1px 5px 0px rgba(0,0,0,0.75);
-    
+    position: fixed;
+    bottom: 0;
 }
 
 #icon2, #icon3 {
@@ -299,4 +304,84 @@ hr {
 .info-footer {
     color: white;
     font-size: 13px;
+}
+
+
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+
+
+/* Estilos aplicados a temp-registration.php */
+
+#back-regist {
+    background-color: #EEEEEE;
+}
+
+#personal {
+    width: 90%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+#contacto {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+#title-registration1, #title-registration2 {
+    color: #D72323;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.regist-control {
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 20%;
+}
+
+.regist {
+    width: 50%;
+    height: 40px;
+    margin-left: 20%;
+    box-shadow: inset 0px 5px #EEEEEE;
+    padding: 10px;
+    font-size: 13px;
+}
+
+#regist-numero, #regist-puerta {
+    width: 10%;
+}
+
+#regist-postal {
+    width: 15%;
+}
+
+#btn-regist {
+    margin-bottom: 200px;
+    margin-left: 70px;
+    background-image: linear-gradient(#D72323, #A11414);
+    color: white;
+    font-size: 13px;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 2px 2px 3px black;
+}
+
+#btn-regist:hover {
+    background-image: linear-gradient(#950F0F, #950F0F);
 }
