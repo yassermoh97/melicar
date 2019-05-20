@@ -15,6 +15,8 @@
     <body>
         <!-- Llamada a archivos -->
         <?php include 'temp-header.php'; ?>
+        <?php include 'temp-login.php'; ?>
+        <?php include 'temp-search.php'; ?>
         <?php include 'temp-welcome.php'; ?>
         <?php include 'temp-footer.php'; ?>
         
