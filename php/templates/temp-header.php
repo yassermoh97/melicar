@@ -3,9 +3,8 @@
         <!-- Navigation bar -->
         <nav class="navbar navbar-expand-sm navbar-default">
             <!-- Brand -->
-            <img src="../../images/logo.png" id="logotipo"><a class="navbar-brand" href="#"></a>
+            <img src="../../images/logo.png" id="logotipo"><a class="navbar-brand" href="temp-index.php"></a>
             
-            <!-- Toggler/collapsibe Button -->
             <!-- Toggler/collapsibe Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <img src="../../images/menu-icon.png" id="menu-icon">
@@ -19,9 +18,8 @@
                             COCHES Y FURGONETAS
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">NUESTROS COCHES<span><img id="mark-red" src="../../images/mark-red.svg"></span></a>
+                            <a class="dropdown-item" href="temp-cars.php">NUESTROS COCHES<span><img id="mark-red" src="../../images/mark-red.svg"></span></a>
                             <hr><a class="dropdown-item" href="#">NUESTRAS FURGONETAS<span><img id="mark-red" src="../../images/mark-red.svg"></span></a>
-                            <hr><a class="dropdown-item" href="#">COCHES PRESTIGE<span><img id="mark-red" src="../../images/mark-red.svg"></span></a>
                         </div>
                     </li>
 
