@@ -383,3 +383,125 @@ hr {
 #btn-regist:hover {
     background-image: linear-gradient(#950F0F, #950F0F);
 }
+
+
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+
+
+/* Estilos aplicados a temp-cars.php y temp-van.php*/
+
+#group-a, #group-b, #group-c, #group-d, #group-e {
+    padding: 40px;
+    width: 90%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cars {
+    width: 90%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#car-final1, #car-final2 {
+    margin-bottom: 300px;
+}
+
+.title-car {
+    margin-top: 30px;
+}
+
+#image-plazas, #image-cambio, #image-combustible, #image-maletas, #image-puertas {
+    margin-left: 40px;
+}
+
+#image-air {
+    margin-left: 60px;
+}
+
+.info-accesories {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.car-imagen {
+    width: 100%;
+}
+
+.info {
+    font-size: 13px;
+}
+
+
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+
+
+/* Estilos aplicados a "temp-services.php" */
+
+#title-coberturas {
+    padding: 40px;
+    width: 90%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#coberturas {
+    width: 50%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 300px;
+    text-align: center;
+}
+
+#basica {
+    background-color: white;
+}
+
+#media {
+    background-color: #959595;
+    color: white;
+}
+
+#premium {
+    background-color: #303841;
+    color: white;
+}
+
+.info-cobertura {
+    font-size: 13px;
+}
+
+.title-cobertura, .info-cobertura {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.info-cobertura {
+    margin-top: 20px;
+}
+
+.title-cobertura {
+    margin-top: 30px;
+}
+
+.ampliación {
+    font-size: 40px;
+}
