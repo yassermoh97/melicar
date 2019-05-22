@@ -3,7 +3,7 @@
         <!-- Navigation bar -->
         <nav class="navbar navbar-expand-sm navbar-default">
             <!-- Brand -->
-            <img src="../../images/logo.png" id="logotipo"><a class="navbar-brand" href="temp-index.php"></a>
+            <a class="navbar-brand" href="temp-index.php"><img src="../../images/logo.png" id="logotipo"></a>
             
             <!-- Toggler/collapsibe Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -19,7 +19,7 @@
                         </a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="temp-cars.php">NUESTROS COCHES<span><img id="mark-red" src="../../images/mark-red.svg"></span></a>
-                            <hr><a class="dropdown-item" href="#">NUESTRAS FURGONETAS<span><img id="mark-red" src="../../images/mark-red.svg"></span></a>
+                            <hr><a class="dropdown-item" href="temp-van.php">NUESTRAS FURGONETAS<span><img id="mark-red" src="../../images/mark-red.svg"></span></a>
                         </div>
                     </li>
 
@@ -28,7 +28,7 @@
                             SERVICIOS
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">SERVICIOS<span><img id="mark-red" src="../../images/mark-red.svg"></span></a>
+                            <a class="dropdown-item" href="temp-services.php">SERVICIOS<span><img id="mark-red" src="../../images/mark-red.svg"></span></a>
                             <hr><a class="dropdown-item" href="#">EXTRAS<span><img id="mark-red" src="../../images/mark-red.svg"></span></a>
                         </div>
                     </li>
