@@ -29,7 +29,7 @@
                         </a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="temp-services.php">SERVICIOS<span><img id="mark-red" src="../../images/mark-red.svg"></span></a>
-                            <hr><a class="dropdown-item" href="#">EXTRAS<span><img id="mark-red" src="../../images/mark-red.svg"></span></a>
+                            <hr><a class="dropdown-item" href="temp-extras.php">EXTRAS<span><img id="mark-red" src="../../images/mark-red.svg"></span></a>
                         </div>
                     </li>
                 </ul>
