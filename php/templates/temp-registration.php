@@ -62,6 +62,7 @@
                         <div class="col-xs-12 col-md-12 col-xl-12">
                             <label for="regist_usuario" class="regist-control">Nombre de usuario*</label><br>
                             <input type="text" id="regist_usuario" class="regist" name="regist_usuario">
+                            <div class="mensaje" id="mostrar_usuario"></div>
                         </div>
                     </div>
                     
@@ -73,13 +74,13 @@
                         </div>
                     </div>
                     
-                    <div class="row">
+                    <!--<div class="row">
                         <div class="col-xs-12 col-md-12 col-xl-12">
                             <label for="regist_password2" class="regist-control">Confirmar contraseña*</label><br>
                             <input type="password" id="regist_password2" class="regist" name="regist_password2"><br>
                             <div class="mensaje" id="mostrar_password2"></div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -118,17 +119,7 @@
                             <input type="text" id="regist_numero" class="regist" name="regist_numero"><br>
                             <div class="mensaje" id="mostrar_numero"></div>
                         </div>
-                    </div>
-                    
-                    
-                    <div class="row">  
-                        <div class="col-xs-12 col-md-12 col-xl-12">
-                            <label for="regist_puerta" class="regist-control">Puerta</label><br>
-                            <input type="text" id="regist_puerta" class="regist" name="regist_puerta"><br>
-                            <div class="mensaje" id="mostrar_puerta"></div>
-                        </div>
-                    </div>
-                    
+                    </div>          
                     
                     <div class="row">
                         <div class="col-xs-12 col-md-12 col-xl-12">
@@ -152,7 +143,6 @@
         
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-       
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     </body>
 </html>
