@@ -10,7 +10,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         
          <!-- Javascript -->
-         <script type="text/javascript" src="#"></script>
+          <!--<script type="text/javascript" src="../../js/validar-updateinfo.js"></script>-->
         
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="../../css/styles.css">
@@ -19,7 +19,7 @@
     
     <body>
         <!-- Llamada a archivos -->
-        <?php include 'temp-updateinfo.php'; ?>
+        <?php include 'temp-navertical.php'; ?>
         <?php include 'temp-footer.php'; ?>
         
         <!-- Optional JavaScript -->
