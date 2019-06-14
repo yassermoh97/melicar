@@ -29,7 +29,7 @@
                 <div class="card">
                     <div class="row">
                         <div class="col-xs-12 col-md-12 col-xl-7">
-                            <img src="../../images/cars/grupo-A-pequeños.png" class="car-imagen">
+                            <img src="../../images/cars/Fiat500.png" class="car-imagen">
                         </div>
                         
                         <div class="col-xs-12 col-md-12 col-xl-5">
@@ -59,7 +59,7 @@
                 <div class="card">
                     <div class="row">
                         <div class="col-xs-12 col-md-12 col-xl-7">
-                            <img src="../../images/cars/grupo-b-pequeños.png" class="car-imagen">
+                            <img src="../../images/cars/RenaultClio.png" class="car-imagen">
                         </div>
                         
                         <div class="col-xs-12 col-md-12 col-xl-5">
@@ -96,7 +96,7 @@
                 <div class="card">
                     <div class="row">
                         <div class="col-xs-12 col-md-12 col-xl-7">
-                            <img src="../../images/cars/grupo-c-medianos.png" class="car-imagen">
+                            <img src="../../images/cars/SeatLeon.png" class="car-imagen">
                         </div>
                         
                         <div class="col-xs-12 col-md-12 col-xl-5">
@@ -133,7 +133,7 @@
                 <div class="card">
                     <div class="row">
                         <div class="col-xs-12 col-md-12 col-xl-7">
-                            <img src="../../images/cars/grupo-d-grandes.png" class="car-imagen">
+                            <img src="../../images/cars/RenaultTalisman.png" class="car-imagen">
                         </div>
                         
                         <div class="col-xs-12 col-md-12 col-xl-5">
@@ -170,7 +170,7 @@
                 <div class="card">
                     <div class="row">
                         <div class="col-xs-12 col-md-12 col-xl-7">
-                            <img src="../../images/cars/grupo-e-monovolumenes.png" class="car-imagen">
+                            <img src="../../images/cars/VolkswagenTouran.png" class="car-imagen">
                         </div>
                         
                         <div class="col-xs-12 col-md-12 col-xl-5">
