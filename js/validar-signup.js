@@ -15,7 +15,7 @@ $(document).ready(function() {
     // Ejecuta cuando el campo pierde el foco
     $("#regist_nombre").focusout(function() {
         // Declaración de expresión regular
-       var exp = /^[a-zA-Z]+$/;
+       var exp = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/;
        
        // Comprobar si el campo cumple la expresión regular
        if ($("#regist_nombre").val().match(exp)) {
@@ -30,7 +30,7 @@ $(document).ready(function() {
     
     $("#regist_apellidos").focusout(function() {
        // Declaración de expresión regular
-       var exp = /^[a-zA-Z]+$/;
+       var exp = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/;
        
        // Comprobar si el campo cumple la expresión regular
        if ($("#regist_apellidos").val().match(exp)) {
@@ -116,7 +116,7 @@ $(document).ready(function() {
     
     $("#regist_pais").focusout(function() {
        // Declaración de expresión regular
-       var exp = /^[a-zA-Z]+$/;
+       var exp = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/;
        
        // Comprobar si el campo cumple la expresión regular
        if ($("#regist_pais").val().match(exp)) {
@@ -131,7 +131,7 @@ $(document).ready(function() {
     
     $("#regist_ciudad").focusout(function() {
        // Declaración de expresión regular
-       var exp = /^[a-zA-Z]+$/;
+       var exp = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/;
        
        // Comprobar si el campo cumple la expresión regular
        if ($("#regist_ciudad").val().match(exp)) {
@@ -146,7 +146,7 @@ $(document).ready(function() {
     
     $("#regist_calle").focusout(function() {
        // Declaración de expresión regular
-       var exp = /^[a-zA-Z]+$/;
+       var exp = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/;
        
        // Comprobar si el campo cumple la expresión regular
        if ($("#regist_calle").val().match(exp)) {
