@@ -13,6 +13,13 @@
                                 TU PERFIL<span><img src="../../images/logo-user.svg" id="logo-user"></span>
                         </button>
                     </li>';
+        if ($_SESSION["l_usuario"] == "admin") {
+             $tuperfil = '<li class="nav-item">
+                        <button type="button" class="bt-perfil" role="link" onclick="window.location=\'temp-adperfil.php\'">
+                                TU PERFIL<span><img src="../../images/logo-user.svg" id="logo-user"></span>
+                        </button>
+                    </li>';
+        }
         
     } else {
         
