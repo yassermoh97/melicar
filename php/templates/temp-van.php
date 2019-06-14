@@ -29,7 +29,7 @@
                 <div class="card">
                     <div class="row">
                         <div class="col-xs-12 col-md-12 col-xl-7">
-                            <img src="../../images/cars/grupo-f-fugoneta.png" class="car-imagen">
+                            <img src="../../images/cars/MercedesCitan.png" class="car-imagen">
                         </div>
                         
                         <div class="col-xs-12 col-md-12 col-xl-5">
@@ -59,7 +59,7 @@
                 <div class="card">
                     <div class="row">
                         <div class="col-xs-12 col-md-12 col-xl-7">
-                            <img src="../../images/cars/grupo-g-furgonetas.png" class="car-imagen">
+                            <img src="../../images/cars/MercedesVito.png" class="car-imagen">
                         </div>
                         
                         <div class="col-xs-12 col-md-12 col-xl-5">
