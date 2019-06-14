@@ -10,7 +10,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         
          <!-- Javascript -->
-         <script type="text/javascript" src="#"></script>
+         <script type="text/javascript" src="../../js/validar-updatepass.js"></script>
         
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="../../css/styles.css">
@@ -18,8 +18,6 @@
     </head>
     
     <body>
-        <!-- Llamada a archivos -->
-        <?php include 'temp-header.php'; ?>
         
         <?php
             session_start();
@@ -43,9 +41,26 @@
             $datos = mysqli_fetch_array($consulta_resultado);
         ?>
         
+        <?php include 'temp-header.php'; ?>
+        
         <div class="row">
             <div class="config col-xs-12 col-md-2 col-xl-2">
-                <?php include 'temp-navertical.php'; ?>
+                <div class="container-config">
+                    <h2 class="title-config">AJUSTES DE PERFIL</h2>
+                    <ul class="nav flex-column">
+                        <li class="nav-config">
+                            <a class="nav-config" href="temp-updateinfo.php">Mi cuenta</a>
+                        </li>
+
+                        <li class="nav-config">
+                            <a class="nav-config" href="temp-updatepass.php">Modificar contraseña</a>
+                        </li>
+
+                        <li class="nav-config">
+                            <a class="nav-config" href="#">Reservas</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <div class="col-xs-12 col-md-10 col-xl-10">
@@ -68,6 +83,7 @@
                                     <div class="mensaje" id="mostrar_password2"></div>
                                 </div>
                             </div>
+                            <input type="hidden" id="regist_usuario" value="<?php echo $datos['usuario_cli']; ?>" class="regist" name="regist_usuario"><br>
                         </div>
                     </div>
                 </div>
