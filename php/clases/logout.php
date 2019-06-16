@@ -9,7 +9,7 @@ unset($_SESSION);
 // Destruir todas las sesión
 session_destroy();
 
-// Redirigir a index.php
+// Redirigir a la página de inicio
 header("Location: ../templates/temp-index.php");
 
 die();
