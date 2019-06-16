@@ -18,8 +18,17 @@
     </head>
     
     <body>
-        <!-- Llamada a archivos -->
+        <!-- Archivos inluidos -->
         <?php include 'temp-header.php'; ?>
+        
+        <!-- Migas de pan -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="temp-index.php">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="temp-adperfil.php">Tu perfil</a></li>
+                <li class="breadcrumb-item" aria-current="page">Registrar vehículo</li>
+            </ol>
+        </nav>
         
         <?php
             session_start();
@@ -42,7 +51,8 @@
                     </ul>
                 </div>
             </div>
-
+            
+            <!-- Formulario de registro de vehículos -->
             <div class="col-xs-12 col-md-10 col-xl-10">
                 <div class="row">
                     <div class="col-xs-12 col-md-12 col-xl-12">
@@ -116,7 +126,7 @@
                                 <div class="col-xs-12 col-md-12 col-xl-12">
                                     <label for="regist_combustible" class="regist-control">Combustible*</label><br>
                                     <input type="text" id="regist_combustible" class="regist" name="regist_combustible">
-                                    <div class="mensaje" id="mostrar_air"></div>
+                                    <div class="mensaje" id="mostrar_combustible"></div>
                                 </div>
                             </div>
 
@@ -137,7 +147,8 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Regist -->
+                    
+                    <!-- Registrar -->
                     <div class="row">
                         <p class="col-xs-12 col-md-12 col-xl-12">
                             <button type="button" class="btn" id="btn-regveh">REGISTRAR</button>
@@ -147,7 +158,7 @@
             </div> 
         </div>
         
-         <!-- Llamada a archivos -->
+        <!-- Archivos inluidos -->
         <?php include 'temp-footer.php'; ?>
          
         <!-- Optional JavaScript -->
