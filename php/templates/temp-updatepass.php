@@ -75,14 +75,6 @@
                                     <div class="mensaje" id="mostrar_password1"></div>
                                 </div>
                             </div>
-
-                            <div class="row">
-                                <div class="col-xs-12 col-md-12 col-xl-12">
-                                    <label for="regist_password2" class="regist-control">Confirmar contraseña*</label><br>
-                                    <input type="password" id="regist_password2" value="<?php echo $datos['contrasena_cli']; ?>" class="regist" name="regist_password2"><br>
-                                    <div class="mensaje" id="mostrar_password2"></div>
-                                </div>
-                            </div>
                             <input type="hidden" id="regist_usuario" value="<?php echo $datos['usuario_cli']; ?>" class="regist" name="regist_usuario"><br>
                         </div>
                     </div>
