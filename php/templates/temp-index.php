@@ -54,6 +54,7 @@
         
          <!-- Javascript -->
          <script type="text/javascript" src="../../js/validar-signin.js"></script>
+         <script type="text/javascript" src="../../js/busqueda.js"></script>
         
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="../../css/styles.css">
