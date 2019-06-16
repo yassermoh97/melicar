@@ -1,3 +1,4 @@
+// Ejecutar el código una vez esté cargada la página
 $(document).ready(function() {
     var bool_nombre = false;
     var bool_apellidos = false;
@@ -104,15 +105,6 @@ $(document).ready(function() {
        }  
     });
     
-    //$("#regist_password2").focusout(function() {
-    //    if (($("#regist_password1").val()) === ($("#regist_password2").val())) {
-    //        $("#mostrar_password2").text("");
-    //        bool_password2 = true;
-    //    } else if (!($("#regist_password1").val()) === ($("#regist_password2").val())) {
-    //         $("#mostrar_password2").text("Las contraseñas no coinciden");
-    //         bool_password2 = false;
-    //    }
-    //});
     
     $("#regist_pais").focusout(function() {
        // Declaración de expresión regular
@@ -190,8 +182,9 @@ $(document).ready(function() {
        } 
     });
 
-    
+    // Ejecutar código cuando se haya pulsado el botón "btn-regist"
     $("#btn-regist").click(function() {
+        // Pruebas por consola
         console.log(bool_nombre);
         console.log(bool_apellidos);
         console.log(bool_email);
@@ -205,7 +198,9 @@ $(document).ready(function() {
         console.log(bool_numero);
         console.log(bool_postal);
         
+        // Ejecutar si se cumplen todas las condiciones de validación
         if (bool_nombre && bool_apellidos && bool_telefono && bool_email && bool_usuario && bool_password1 && bool_pais && bool_ciudad && bool_direccion && bool_numero &&  bool_postal) {
+            // Recolección de datos a través del id
             var nombre_regist = $("#regist_nombre").val();
             var apellidos_regist = $("#regist_apellidos").val();
             var telefono_regist = $("#regist_telefono").val();
@@ -218,6 +213,7 @@ $(document).ready(function() {
             var numero_regist = $("#regist_numero").val();
             var postal_regist = $("#regist_postal").val();
 
+            // Almacenamiento en una variable los datos recogidos
             var datos = {
                 "r_nombre" : nombre_regist,
                 "r_apellidos" : apellidos_regist,
@@ -231,14 +227,15 @@ $(document).ready(function() {
                 "r_numero" : numero_regist,
                 "r_codigo_postal" : postal_regist
             };
-
+            
+            // Llamada a Ajax
             $.ajax({
                 data: datos,
                 type: "POST",
                 url: "../clases/signup.php",
                 success: function(response) {
                        if (response) {
-                            alert("Datos incorrectos");
+                            alert("Este usuario ya existe");
                        } else { 
                             // Redirigir a temp-index.php
                             window.location.replace("temp-index.php");   
