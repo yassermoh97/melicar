@@ -18,7 +18,7 @@
     </head>
     
     <body>
-        <!-- Llamada a archivos -->
+        <!-- Archivos inluidos -->
         <?php include 'temp-navertical.php'; ?>
         <?php include 'temp-footer.php'; ?>
         
