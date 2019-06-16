@@ -18,8 +18,17 @@
     </head>
     
     <body>
-        <!-- Llamada a archivos -->
+        <!-- Archivos inluidos -->
         <?php include 'temp-header.php'; ?>
+        
+        <!-- Migas de pan -->
+        <nav aria-label="breadcrumb" class="migas">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="temp-index.php">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="temp-adperfil.php">Tu perfil</a></li>
+                <li class="breadcrumb-item" aria-current="page">Vehículos registrados</li>
+            </ol>
+        </nav>
         
         <?php
             session_start();
@@ -59,10 +68,13 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Consulta a la base de datos
+    // Almacenamiento de consulta en una variable
     $consulta_vehiculo = "SELECT * FROM vehiculos";
+    
+    //Consulta a la base de datos
     $consulta_resultado =  $conn->query($consulta_vehiculo);
     
+    // Comprobación de coincidencias
     if ($consulta_resultado->num_rows > 0) {
     ?>
             <div class="col-xs-12 col-md-10 col-xl-10">
@@ -81,6 +93,8 @@
                         <th>Acción</th>
                     </tr>
     <?php
+    
+        // Almacenamiento de resultados en array asociativo
         while ($row = $consulta_resultado->fetch_assoc()) {
             $id_vehiculo = $row['id_veh'];
     ?>
@@ -95,6 +109,7 @@
                         <td><?php echo $row['air_veh']; ?></td>
                         <td><?php echo $row['combustible_veh']; ?></td>
                         <td><?php echo $row['precio_veh']."€"; ?></td>
+                        <!-- Dato enviado al pulsar el botón ELIMINAR -->
                         <input type="text" value="<?php echo $id_vehiculo; ?>" class="ocult" id="vehiculo_id<?php echo $id_vehiculo; ?>">
                         <td class="accion"><button type="button" class="eliminar" onclick="enviar(<?php echo $id_vehiculo; ?>)">
                         ELIMINAR
@@ -107,7 +122,7 @@
 <?php    } ?>
         </div>
         
-         <!-- Llamada a archivos -->
+        <!-- Archivos inluidos -->
         <?php include 'temp-footer.php'; ?>
          
         <!-- Optional JavaScript -->
