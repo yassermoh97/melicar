@@ -18,8 +18,17 @@
     </head>
     
     <body>
-        <!-- Llamada a archivos -->
+        <!-- Archivos inluidos -->
         <?php include 'temp-header.php'; ?>
+        
+        <!-- Migas de pan -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="temp-index.php">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="temp-perfil.php">Tu perfil</a></li>
+                <li class="breadcrumb-item" aria-current="page">Reservas</li>
+            </ol>
+        </nav>
         
         <?php
             session_start();
@@ -60,14 +69,19 @@
         die("Connection failed: " . $conn->connect_error);
     }
     
-    
+    // Almacenamiento del nombre de usuario de la sesión que está iniciada
     $uss = $_SESSION['l_usuario'];
-    // Consulta a la base de datos
+    
+    // Almacenamiento de consulta en una variable
     $consulta_reserva = "SELECT * FROM clientes, reserva WHERE clientes.usuario_cli = '$uss' AND clientes.id_cli = reserva.id_cli";
+    
+    // Consulta a la base de datos
     $consulta_resultado1 =  $conn->query($consulta_reserva);
     
-    
+    // Comprobación de coincidencias
     if ($consulta_resultado1->num_rows > 0) {
+        
+        // Almacenamiento de resultados en array asociativo
         while ($row = $consulta_resultado1->fetch_assoc()) {
             $id_re = $row['id_res'];
     ?>
@@ -86,6 +100,8 @@
                             <td><?php echo $row['hora_entrega']; ?></td>
                             <td><?php echo $row['fecha_devolucion']; ?></td>
                             <td><?php echo $row['hora_devolucion']; ?></td>
+                            
+                            <!-- Dato enviado al pulsar el botón cancelar -->
                             <input type="text" value="<?php echo $id_re; ?>" class="ocult" id="reservaid<?php echo $id_re; ?>">
             
                             <td class="accion"><button type="button" class="eliminar" onclick="envio(<?php echo $id_re; ?>)">
