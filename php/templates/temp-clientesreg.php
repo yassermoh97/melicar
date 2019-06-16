@@ -97,8 +97,8 @@
                         <td><?php echo $row['codigo_postal_cli']; ?></td>
                         <input type="text" value="<?php echo $id_cliente; ?>" class="ocult" id="cliente_id<?php echo $id_cliente; ?>">
                         <td class="accion"><button type="button" class="eliminar" onclick="enviar(<?php echo $id_cliente; ?>)">
-                        X
-                        </button></td>
+                        ELIMINAR
+                        </button></td>                 
                     </tr>            
 <?php   }   ?>
                 </table>              
