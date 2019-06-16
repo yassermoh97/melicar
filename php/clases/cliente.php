@@ -80,4 +80,23 @@
             $result = mysqli_query($this->db,$sql1) or die(mysqli_connect_errno()."Data cannot inserted"); 
             return $result;
         }
+        
+        public function elim_reserva($id) {
+            $sql = "SELECT * FROM reserva WHERE id_res='$id'";
+
+            # Comprobar si el usuario ya está registrado
+            $check =  $this->db->query($sql);
+            $count_row = $check->num_rows;
+
+            # Si el usuario no está insertado en la tabla, se registrará
+            if ($count_row == 1) {
+                $sql1 = "DELETE FROM reserva WHERE id_res='$id'";
+                $result = mysqli_query($this->db,$sql1) or die(mysqli_connect_errno()."Data cannot inserted");     
+                return $result;
+            } 
+
+            else {
+                return false;
+            }
+        }
     }
