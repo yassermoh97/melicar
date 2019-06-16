@@ -1,5 +1,6 @@
+// Ejecutar el código una vez esté cargada la página
 $(document).ready(function() {
-  
+    
     function nom() {
         // Declaración de expresión regular
        var exp = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/;
@@ -153,6 +154,7 @@ $(document).ready(function() {
     }
     
     $("#btn-modif1").click(function() {
+        // Llamada a funciones
         nom();
         ape();
         email();
@@ -163,6 +165,7 @@ $(document).ready(function() {
         num();
         post();
         
+        // Pruebas por consola
         console.log(nom());
         console.log(ape());
         console.log(email());
@@ -173,7 +176,9 @@ $(document).ready(function() {
         console.log(num());
         console.log(post());
         
+        // Ejecutar si se cumplen todas las condiciones de validación
         if (nom() && ape() && tel() && email() && pais() && ciu() && dir() && num() &&  post()) {
+            // Recolección de datos a través del id
             var nombre_regist = $("#regist_nombre").val();
             var apellidos_regist = $("#regist_apellidos").val();
             var telefono_regist = $("#regist_telefono").val();
@@ -185,6 +190,7 @@ $(document).ready(function() {
             var numero_regist = $("#regist_numero").val();
             var postal_regist = $("#regist_postal").val();
 
+            // Almacenamiento en una variable los datos recogidos
             var datos = {
                 "m_nombre" : nombre_regist,
                 "m_apellidos" : apellidos_regist,
@@ -197,7 +203,8 @@ $(document).ready(function() {
                 "m_numero" : numero_regist,
                 "m_codigo_postal" : postal_regist
             };
-
+            
+             // Llamada a Ajax
             $.ajax({
                 data: datos,
                 type: "POST",
