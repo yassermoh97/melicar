@@ -12,15 +12,26 @@
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
        
-        
+         <!-- Javascript -->
+         <script type="text/javascript" src="../../js/realizar-reserva.js"></script>
+         
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="../../css/styles.css">
         <title>Melicar</title>
     </head>
     
     <body>
-       
+        <!-- Archivos inluidos -->
         <?php include 'temp-header.php'; ?>
+        
+        <!-- Migas de pan -->
+        <nav aria-label="breadcrumb" class="migas">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="temp-index.php">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="temp-alquilar.php">Reservar</a></li>
+                <li class="breadcrumb-item" aria-current="page">Realizar reserva</li>
+            </ol>
+        </nav>
         
         <?php
             $servername = "localhost";
@@ -36,7 +47,7 @@
                 die("Connection failed: " . $conn->connect_error);
             }
             
-            
+            // Comprobar si el botón reservar está declarado
             if (isset($_POST['btn-reservar'])) {
                 $nom_cli = $_SESSION['l_usuario'];
                 $id_cars = $_POST['idveh'];
@@ -45,14 +56,23 @@
                 $ho1 = $_POST['hora_en'];
                 $ho2 = $_POST['hora_de'];
                 
-                // Consulta a la base de datos
+                // Almacenamiento de consulta en una variable
                 $consulta_clientes = "SELECT * FROM clientes WHERE usuario_cli = '$nom_cli'";
+                
+                // Consulta a la base de datos
                 $consulta_cliente =  $conn->query($consulta_clientes);
+                
+                // Almacenamiento de resultados en array asociativo
                 $cliente = mysqli_fetch_array($consulta_cliente);
                 $cli_id = $cliente['id_cli'];
                 
+                // Almacenamiento de consulta en una variable
                 $consulta_vehiculos = "SELECT * FROM vehiculos WHERE id_veh = '$id_cars'";
+                
+                // Consulta a la base de datos
                 $consulta_vehiculo =  $conn->query($consulta_vehiculos);
+                
+                // Almacenamiento de resultados en array asociativo
                 $coche = mysqli_fetch_array($consulta_vehiculo);
             
         ?>
@@ -87,6 +107,7 @@
                                 
                                 <h2 id="price">PRECIO <?php echo $coche['precio_veh']; ?>€ / día</h2>
                         </div>
+                <!-- Datos que se envían tras hacer una reserva -->
                 <form action="../clases/reserva.php" method="POST">
                     <input type="number" class="ocult"  name="veh_id" id="veh_id" value="<?php echo $id_cars;  ?>">
                     <input type="number" class="ocult"  name="cli_id" id="cli_id" value="<?php echo  $cli_id;   ?>">
@@ -100,8 +121,7 @@
             }
     ?>
         
-       
-                          
+        <!-- Archivos inluidos -->                  
         <?php include 'temp-footer.php'; ?>
         
         <!-- Optional JavaScript -->
