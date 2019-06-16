@@ -75,7 +75,7 @@ $(document).ready(function() {
     
     $("#regist_usuario").focusout(function() {
        // Declaración de expresión regular
-       var exp = /^[a-zA-Z]+$/;
+       var exp = /^[a-zA-ZñÑ]+$/;
        
        // Comprobar si el campo cumple la expresión regular
        if ($("#regist_usuario").val().match(exp)) {
@@ -90,7 +90,7 @@ $(document).ready(function() {
     
     $("#regist_password1").focusout(function() {
        // Declaración de expresión regular
-       var exp =  /^[A-Z]{1}\w+/;
+       var exp =  /^[A-Z]{1}[a-zA-ZñÑ]+$/;
        
        // Comprobar si el campo cumple la expresión regular
        if ($("#regist_password1").val().match(exp)) {
