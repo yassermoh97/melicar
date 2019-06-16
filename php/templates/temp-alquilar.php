@@ -37,11 +37,12 @@
         
         <div id="filtro1"> 
             <form action="temp-alquilar.php" method="POST">
-                <select id="filtrar" name="filtrar" onchange="">
-                    <option value="2">Precio: Más bajo</option>
-                    <option value="1">Precio: Más alto</option>
+                <select id="filtrar1" name="filtrar1" onchange="">
+                    <option value="0"></option>
+                    <option value="2">Precio: De más bajo a más alto</option>
+                    <option value="1">Precio: De más alto a más bajo</option>
                 </select>
-                <input type="submit" id="filt1" name="filt" value="FILTRAR">
+                <input type="submit" id="filt1" name="filt1" value="FILTRAR">
             </form>
         </div>
 <?php
@@ -65,16 +66,20 @@
         $hora1 = $_POST['option-time1'];
         $hora2 = $_POST['option-time2'];
         
-        if (!isset($_POST['filtrar'])) {
+        if (!isset($_POST['filtrar1'])) {
             
             // Consulta a la base de datos
             $consulta_reserva = "SELECT * FROM vehiculos WHERE estado_veh = 'disponible'";
-          
+     
         } else {
-            if ($_POST['filtrar'] == 1) {
+            if ($_POST['filtrar1'] == 0) {
+                // Consulta a la base de datos
+                $consulta_reserva = "SELECT * FROM vehiculos WHERE estado_veh = 'disponible'";
+            }
+            if ($_POST['filtrar1'] == 1) {
                 $consulta_reserva = "SELECT * FROM vehiculos WHERE estado_veh = 'disponible' ORDER BY precio_veh DESC";
             }
-            if ($_POST['filtrar'] == 2) {
+            if ($_POST['filtrar1'] == 2) {
                 $consulta_reserva = "SELECT * FROM vehiculos WHERE estado_veh = 'disponible' ORDER BY precio_veh ASC";
             }
         }
