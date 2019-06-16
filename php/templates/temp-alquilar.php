@@ -4,10 +4,12 @@
     // Verificar que esta declarada la sesión y que su estado es autenticado.
     if (isset($_SESSION["l_usuario"]) and $_SESSION["estado"] == "Autenticado") {
         
+        // Botón en caso de que esté inciada la sesión
         $reserv = '<input type="submit" class="alquilar-btn" name="btn-reservar" value="RESERVAR">';
         
     } else {
         
+        // Botón en caso de que no esté iniciada la sesión
         $reserv = '<input type="button" class="alquilar-btn" name="btn-reservar" value="RESERVAR" data-target="#miModal" data-toggle="modal">';
         
     }
@@ -32,9 +34,18 @@
     </head>
     
     <body>
-       
+        <!-- Archivos inluidos -->
         <?php include 'temp-header.php'; ?>
         
+        <!-- Migas de pan -->
+        <nav aria-label="breadcrumb" class="migas">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="temp-index.php">Inicio</a></li>
+                <li class="breadcrumb-item" aria-current="page">Reservar</li>
+            </ol>
+        </nav>
+        
+        <!-- Filtro de resultados -->
         <div id="filtro1"> 
             <form action="temp-alquilar.php" method="POST">
                 <select id="filtrar1" name="filtrar1" onchange="">
@@ -60,26 +71,29 @@
     }
     
     
-        
+        // Datos obtenidos del formulario de búsqueda
         $fecha1 = $_POST['option-date1'];
         $fecha2 = $_POST['option-date2'];
         $hora1 = $_POST['option-time1'];
         $hora2 = $_POST['option-time2'];
         
+        // Comprobar si el valor del filtro está declarado
         if (!isset($_POST['filtrar1'])) {
             
-            // Consulta a la base de datos
+            // Almacenamiento de consulta en una variable
             $consulta_reserva = "SELECT * FROM vehiculos WHERE estado_veh = 'disponible'";
      
         } else {
             if ($_POST['filtrar1'] == 0) {
-                // Consulta a la base de datos
+                // Almacenamiento de consulta en una variable
                 $consulta_reserva = "SELECT * FROM vehiculos WHERE estado_veh = 'disponible'";
             }
             if ($_POST['filtrar1'] == 1) {
+                // Almacenamiento de consulta en una variable
                 $consulta_reserva = "SELECT * FROM vehiculos WHERE estado_veh = 'disponible' ORDER BY precio_veh DESC";
             }
             if ($_POST['filtrar1'] == 2) {
+                // Almacenamiento de consulta en una variable
                 $consulta_reserva = "SELECT * FROM vehiculos WHERE estado_veh = 'disponible' ORDER BY precio_veh ASC";
             }
         }
@@ -87,10 +101,17 @@
 
         // Consulta a la base de datos
         //$consulta_reserva = "SELECT * FROM vehiculos WHERE estado_veh = 'disponible'";
+        
+        // Consulta a la base de datos
         $consulta_resultado1 =  $conn->query($consulta_reserva);
+        
+        // Contador de coincidencia en filas
         $cont1 = $consulta_resultado1->num_rows;
         
+        // Comprobación de coincidencias
         if (($cont1 > 0)) {
+            
+            // Almacenamiento de resultados en array asociativo
             while ($row = $consulta_resultado1->fetch_assoc()) {
                 $imagen = str_replace("C:fakepath", "", $row['imagen_veh']);
                 $idve = $row['id_veh'];
@@ -119,6 +140,7 @@
                                                 <img src="../../images/cars/combustible.png" id="image-combustible"><span><?php echo $row['combustible_veh']; ?></span>
                                                 <img src="../../images/cars/air-acon.png" id="image-air"><span><?php echo $row['air_veh']; ?></span>
                                             </div>
+                                            <!-- Valores ocultos -->
                                             <input type="text" class="ocult"  id="idveh<?php echo $row['id_veh']; ?>" name="idveh" value="<?php echo $row['id_veh']; ?>">
                                             <input type="text"  class="ocult" name="fecha_en" value="<?php echo $fecha1; ?>">
                                             <input type="text"  class="ocult" name="fecha_de" value="<?php echo $fecha2; ?>">
@@ -147,6 +169,7 @@
             <p></p>
         </div>
         
+        <!-- Modal de advertencia de inicio de sesión -->
         <div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -159,6 +182,8 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Archivos inluidos -->
         <?php include 'temp-footer.php'; ?>
         
         <!-- Optional JavaScript -->
