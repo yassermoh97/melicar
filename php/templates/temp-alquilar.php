@@ -1,5 +1,16 @@
 <?php
     session_start();
+    
+    // Verificar que esta declarada la sesión y que su estado es autenticado.
+    if (isset($_SESSION["l_usuario"]) and $_SESSION["estado"] == "Autenticado") {
+        
+        $reserv = '<input type="submit" class="alquilar-btn" name="btn-reservar" value="RESERVAR">';
+        
+    } else {
+        
+        $reserv = '<input type="button" class="alquilar-btn" name="btn-reservar" value="RESERVAR" data-target="#miModal" data-toggle="modal">';
+        
+    }
 ?>
 <html>
     <head>
@@ -85,7 +96,8 @@
                                             <h2 class="precio-alquiler"><?php echo $row['precio_veh']; ?>€ / día</h2>
                                             <input type="text"  class="ocult" name="hora_en" value="<?php echo $hora1; ?>">
                                             <input type="text"  class="ocult" name="hora_de" value="<?php echo $hora2; ?>">
-                                            <input type="submit" class="alquilar-btn" name="btn-reservar" value="RESERVAR">
+                                            <?php echo $reserv; ?>
+                                            <!--<input type="submit" class="alquilar-btn" name="btn-reservar" value="RESERVAR">-->
                                         </form>
                                     </div>
                                 </div>
@@ -112,7 +124,20 @@
         
         <div id="separador">
             <p></p>
-        </div>                    
+        </div>
+        
+        <div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h5 class="modal-title" id="myModalLabel">Para acceder a tu perfil, primero debes iniciar sesión.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
         <?php include 'temp-footer.php'; ?>
         
         <!-- Optional JavaScript -->
