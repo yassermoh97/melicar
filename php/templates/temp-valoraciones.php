@@ -5,6 +5,7 @@
     // Verificar que esta declarada la sesión y que su estado es autenticado.
     if (isset($_SESSION["l_usuario"]) and $_SESSION["estado"] == "Autenticado") {
         
+        // Botón en caso de que esté inciada la sesión
         $valorar = '<div class="row">
                     <p class="col-xs-12 col-md-12 col-xl-12">
                         <button type="button" class="btn" id="btn-valorar" onclick="location.href=\'temp-regvaloracion.php\'">VALORAR SERVICIO</button>
@@ -13,6 +14,7 @@
       
     } else {
         
+        // Botón en caso de que no esté iniciada la sesión
         $valorar = '';
         
     }
@@ -35,10 +37,22 @@
     </head>
     
     <body>
-       
+        
+        <!-- Archivos inluidos -->
         <?php include 'temp-header.php'; ?>
+        
+        <!-- Migas de pan -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="temp-index.php">Inicio</a></li>
+                <li class="breadcrumb-item" aria-current="page">Valorar</li>
+            </ol>
+        </nav>
+        
+        <!-- Botón declarado en el script superior -->
         <?php echo $valorar; ?>
         
+        <!-- Filtro de resultados -->
         <div id="filtro2"> 
             <form action="temp-valoraciones.php" method="POST">
                 <select id="filtrar2" name="filtrar2">
@@ -71,13 +85,15 @@
      
     } else {
         if ($_POST['filtrar2'] == 0) {
-            // Consulta a la base de datos
+            // Almacenamiento de consulta en una variable
             $consulta_valoracion = "SELECT * FROM clientes, valoraciones WHERE clientes.id_cli = valoraciones.id_cli;";
         }
         if ($_POST['filtrar2'] == 1) {
+            // Almacenamiento de consulta en una variable
             $consulta_valoracion = "SELECT * FROM clientes, valoraciones WHERE clientes.id_cli = valoraciones.id_cli ORDER BY fecha_valoracion DESC;";
         }
         if ($_POST['filtrar2'] == 2) {
+            // Almacenamiento de consulta en una variable
             $consulta_valoracion = "SELECT * FROM clientes, valoraciones WHERE clientes.id_cli = valoraciones.id_cli ORDER BY fecha_valoracion ASC;";
         }
     }
@@ -85,9 +101,14 @@
     
     // Consulta a la base de datos
     $consulta_resultado =  $conn->query($consulta_valoracion);
+    
+    // Contador de coincidencia en filas
     $cont1 = $consulta_resultado->num_rows;
 
+    // Comprobación de coincidencias
     if (($cont1 > 0)) {
+        
+        // Almacenamiento de resultados en array asociativo
         while ($row = $consulta_resultado->fetch_assoc()) {
             
 ?>
@@ -121,7 +142,9 @@
 
         <div id="separador">
             <p></p>
-        </div>                    
+        </div> 
+        
+        <!-- Archivos inluidos -->
         <?php include 'temp-footer.php'; ?>
         
         <!-- Optional JavaScript -->
