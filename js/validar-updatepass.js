@@ -1,3 +1,4 @@
+// Ejecutar el código una vez esté cargada la página
 $(document).ready(function() {
     
     function pass1() {
@@ -17,18 +18,24 @@ $(document).ready(function() {
     }
     
     $("#btn-modif2").click(function() {
+        // Llama a la función
         pass1();
+        
+        // Pruebas por consola
         console.log(pass1());
         
+        // Ejecutar si se cumplen todas las condiciones de validación
         if (pass1()) {
             var pass_regist = $("#regist_password1").val();
             var usuario_regist = $("#regist_usuario").val();
-
+            
+            // Recolección de datos a través del id
             var datos = {
                 "m_pass" : pass_regist,
                 "m_usuario" : usuario_regist
             };
-
+            
+            // Llamada a Ajax
             $.ajax({
                 data: datos,
                 type: "POST",
