@@ -10,7 +10,8 @@
         $str= str_replace("€", "&amp", $str);
         return $str;
     }
-    # Datos recogidos del formulario de registro de vehiculos
+    
+    // Enviados a través de Ajax
     $tipo = $_POST["r_tipo"];
     $marca = $_POST["r_marca"];
     $modelo = $_POST["r_modelo"];
@@ -26,11 +27,13 @@
     $imagen = sanitize($img);
     
     
-
+    // Creación del objeto y almacenamiento en una variable
     $car = new Administrador();
+    
+    // Ejecutar el método de la clase
     $register = $car->reg_vehiculo($tipo, $marca, $modelo, $plazas, $maletas, $puertas, $cambio, $air, $combustible, $precio, $imagen);
 
-
+    // Mensajes de error
     if (!($car == false)) {
 
 
