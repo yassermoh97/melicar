@@ -71,7 +71,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-12 col-xl-12">
                             <label for="regist_opinion" class="regist-controlopi">Comparte tu opinion*</label><br>
-                            <textarea rows="5" cols="73" id="opinion" name="opinion"></textarea>
+                            <textarea rows="5" cols="73" id="regist_opinion" name="opinion"></textarea>
                             <div class="mensaje" id="mostrar_opinion"></div>
                         </div>
                     </div>
