@@ -20,7 +20,7 @@
                     </li>
 
                     <li class="nav-config">
-                        <a class="nav-config" href="#">Reservas</a>
+                        <a class="nav-config" href="temp-reservasreg.php">Reservas</a>
                     </li>
                 </ul>
             </div>
