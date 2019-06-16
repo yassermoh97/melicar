@@ -8,7 +8,7 @@
     </div>
     
     <div class="col-xs-12 col-md-12 col-xl-4" id="p-footer3">
-        <p class="info-footer"><img src="../../images/sitemap.svg" class="img-footer" id="icon3">Mapa del sitio</p>
+        <p class="info-footer"><a href="temp-sitemap.php"><img src="../../images/sitemap.svg" class="img-footer" id="icon3">Mapa del sitio</a></p>
     </div>
 </footer>
 
