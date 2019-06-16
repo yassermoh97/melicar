@@ -5,10 +5,12 @@
     // Verificar que esta declarada la sesión y que su estado es autenticado.
     if (isset($_SESSION["l_usuario"]) and $_SESSION["estado"] == "Autenticado") {
         
+        // El login desaparece si el usuario inicia sesión
         $iniciar = '';
       
     } else {
         
+        // El login aparece si el usuario inicia sesión
         $iniciar = '<div class="row" id="login">
                         <div class="row" id="login-content">
                             <!-- User -->
@@ -62,10 +64,23 @@
     </head>
     
     <body>
-        <!-- Llamada a archivos -->
+        <!-- Archivos incluidos -->
         <?php include 'temp-header.php'; ?>
+        
+        <!-- Variable declarada en el script superior -->
         <?php echo $iniciar; ?>
+        
+        <!-- Archivos incluidos -->
         <?php include 'temp-search.php'; ?>
+        
+        <!-- Migas de pan -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li><a href="temp-index.php">Inicio</a></li>
+            </ol>
+        </nav>
+        
+        <!-- Archivos incluidos -->
         <?php include 'temp-welcome.php'; ?>
         <?php include 'temp-footer.php'; ?>
         
