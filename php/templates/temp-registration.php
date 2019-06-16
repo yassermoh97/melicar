@@ -21,7 +21,15 @@
         <!-- Llamada a archivos -->
         <?php include 'temp-header.php'; ?>
         
-        <!-- Container -->
+        <!-- Migas de pan -->
+        <nav aria-label="breadcrumb" class="migas">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="temp-index.php">Inicio</a></li>
+                <li class="breadcrumb-item" aria-current="page">Registrarse</li>
+            </ol>
+        </nav>
+        
+        <!-- Formulario de registro -->
         <div class="row">
             <div class="col-xs-12 col-md-12 col-xl-12">
                 <div class="card" id="personal">
@@ -73,14 +81,6 @@
                             <div class="mensaje" id="mostrar_password1"></div>
                         </div>
                     </div>
-                    
-                    <!--<div class="row">
-                        <div class="col-xs-12 col-md-12 col-xl-12">
-                            <label for="regist_password2" class="regist-control">Confirmar contraseña*</label><br>
-                            <input type="password" id="regist_password2" class="regist" name="regist_password2"><br>
-                            <div class="mensaje" id="mostrar_password2"></div>
-                        </div>
-                    </div>-->
                 </div>
             </div>
         </div>
@@ -132,13 +132,14 @@
             </div>
         </div>
         
-        <!-- Regist -->
+        <!-- Registrarse -->
         <div class="row">
             <p class="col-xs-12 col-md-12 col-xl-12">
                 <button type="button" class="btn" id="btn-regist">REGISTRARSE</button>
             </p> 
         </div>
         
+        <!-- Archivos inluidos -->
         <?php include 'temp-footer.php'; ?>
         
         <!-- Optional JavaScript -->
