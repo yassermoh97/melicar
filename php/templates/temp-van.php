@@ -16,8 +16,16 @@
     </head>
     
     <body>
+        <!-- Archivos incluidos -->
        <?php include 'temp-header.php'; ?>
         
+        <!-- Migas de pan -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="temp-index.php">Inicio</a></li>
+                <li class="breadcrumb-item" aria-current="page">Nuestras furgonetas</li>
+            </ol>
+        </nav>
         <div class="info-group">
             <div class="card" id="group-e">
                 <h5 class="title-group">FURGONETAS</h5>
@@ -85,6 +93,7 @@
             </div> 
         </div>
         
+        <!-- Archivos incluidos -->
         <?php include 'temp-footer.php'; ?>
         
         <!-- Optional JavaScript -->
