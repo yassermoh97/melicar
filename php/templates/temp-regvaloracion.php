@@ -5,6 +5,7 @@
     // Verificar que esta declarada la sesión y que su estado es autenticado.
     if (isset($_SESSION["l_usuario"]) and $_SESSION["estado"] == "Autenticado") {
         
+        // El botón aparece si la sesión está iniciada
         $valorar = '<div class="row">
                     <p class="col-xs-12 col-md-12 col-xl-12">
                         <button type="button" class="btn" id="btn-valorar" onclick="location.href=\'temp-regvaloracion.php\'">VALORAR SERVICIO</button>
@@ -13,6 +14,7 @@
       
     } else {
         
+        // El botón desaparece si la sesión está iniciada
         $valorar = '';
         
     }
@@ -33,12 +35,14 @@
     }
     
 
-    // Consulta a la base de datos
+    // Almacenamiento de consulta en una variable
     $consulta_clients = "SELECT * FROM clientes WHERE usuario_cli = '$usser'";
+    
+    //Consulta a la base de datos
     $consulta_client =  $conn->query($consulta_clients);
     $dat = mysqli_fetch_array($consulta_client);
 
-  
+    // Dato obtenido tras la consulta
     $idcli = $dat['id_cli'];
         
     
@@ -62,7 +66,17 @@
     </head>
     
     <body>
+        <!-- Archivos inluidos -->
         <?php include 'temp-header.php'; ?>
+        
+        <!-- Migas de pan -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="temp-index.php">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="temp-valoraciones.php">Valorar</a></li>
+                <li class="breadcrumb-item" aria-current="page">Valorar servicio</li>
+            </ol>
+        </nav>
         
         <div class="row">
             <div class="col-xs-12 col-md-12 col-xl-12">
@@ -101,9 +115,8 @@
                 <button type="button" class="btn" id="btn-valor">GUARDAR CAMBIOS</button>
             </p> 
         </div>
-        
-        
-        
+       
+        <!-- Archivos inluidos -->
         <?php include 'temp-footer.php'; ?>
         
         <!-- Optional JavaScript -->
