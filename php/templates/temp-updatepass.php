@@ -34,14 +34,31 @@
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
             }
+            
+            // Almacenamiento del nombre de usuario de la sesión que está iniciada
             $us = $_SESSION["l_usuario"];
-            // Consulta a la base de datos
+            
+            // Almacenamiento de consulta en una variable
             $consulta_login = "SELECT * FROM clientes WHERE usuario_cli = '$us'";
+            
+            // Consulta a la base de datos
             $consulta_resultado = mysqli_query($conn, $consulta_login);
+            
+            // Almacenamiento de resultados en array
             $datos = mysqli_fetch_array($consulta_resultado);
         ?>
         
+        <!-- Archivos inluidos -->
         <?php include 'temp-header.php'; ?>
+        
+        <!-- Migas de pan -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="temp-index.php">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="temp-perfil.php">Tu perfil</a></li>
+                <li class="breadcrumb-item" aria-current="page">Modificar contraseña</li>
+            </ol>
+        </nav>
         
         <div class="row">
             <div class="config col-xs-12 col-md-2 col-xl-2">
@@ -62,7 +79,8 @@
                     </ul>
                 </div>
             </div>
-
+            
+            <!-- Formulario de modificación de contraseña -->
             <div class="col-xs-12 col-md-10 col-xl-10">
                 <div class="row">
                     <div class="col-xs-12 col-md-12 col-xl-12">
@@ -80,7 +98,7 @@
                     </div>
                 </div>
 
-                <!-- Regist -->
+                <!-- Modificar -->
                 <div class="row">
                     <p class="col-xs-12 col-md-12 col-xl-12">
                         <button type="button" class="btn" id="btn-modif2">GUARDAR CAMBIOS</button>
@@ -88,7 +106,8 @@
                 </div>
             </div>
         </div>
-
+        
+        <!-- Archivos inluidos -->
         <?php include 'temp-footer.php'; ?>
         
         <!-- Optional JavaScript -->
