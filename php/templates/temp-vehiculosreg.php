@@ -78,7 +78,7 @@
                         <th>Aire acondicionado</th>
                         <th>Combustible</th>
                         <th>Precio/día</th>
-                        <th colspan="2">Acción</th>
+                        <th>Acción</th>
                     </tr>
     <?php
         while ($row = $consulta_resultado->fetch_assoc()) {
@@ -98,12 +98,7 @@
                         <input type="text" value="<?php echo $id_vehiculo; ?>" class="ocult" id="vehiculo_id<?php echo $id_vehiculo; ?>">
                         <td class="accion"><button type="button" class="eliminar" onclick="enviar(<?php echo $id_vehiculo; ?>)">
                         ELIMINAR
-                        </button></td>
-                        <td class="accion"><button type="button" class="eliminar" onclick="enviar(<?php echo $id_vehiculo; ?>)">
-                        EDITAR
-                        </button></td>
-                        
-                       
+                        </button></td> 
                     </tr>
                     
 <?php   }   ?>
