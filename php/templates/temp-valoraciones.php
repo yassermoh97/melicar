@@ -38,6 +38,18 @@
        
         <?php include 'temp-header.php'; ?>
         <?php echo $valorar; ?>
+        
+        <div id="filtro2"> 
+            <form action="temp-valoraciones.php" method="POST">
+                <select id="filtrar2" name="filtrar2">
+                    <option value="0"></option>
+                    <option value="2">Fecha: Valoraciones antiguas</option>
+                    <option value="1">Fecha: Valoraciones recientes</option>
+                </select>
+                <input type="submit" id="filt2" name="filt2" value="FILTRAR">
+            </form>
+        </div>
+        
 <?php
     $servername = "localhost";
     $username = "yasser";
@@ -52,9 +64,26 @@
         die("Connection failed: " . $conn->connect_error);
     }
     
+    if (!isset($_POST['filtrar2'])) {
+
+        // Consulta a la base de datos
+        $consulta_valoracion = "SELECT * FROM clientes, valoraciones WHERE clientes.id_cli = valoraciones.id_cli;";
+     
+    } else {
+        if ($_POST['filtrar2'] == 0) {
+            // Consulta a la base de datos
+            $consulta_valoracion = "SELECT * FROM clientes, valoraciones WHERE clientes.id_cli = valoraciones.id_cli;";
+        }
+        if ($_POST['filtrar2'] == 1) {
+            $consulta_valoracion = "SELECT * FROM clientes, valoraciones WHERE clientes.id_cli = valoraciones.id_cli ORDER BY fecha_valoracion DESC;";
+        }
+        if ($_POST['filtrar2'] == 2) {
+            $consulta_valoracion = "SELECT * FROM clientes, valoraciones WHERE clientes.id_cli = valoraciones.id_cli ORDER BY fecha_valoracion ASC;";
+        }
+    }
+    
     
     // Consulta a la base de datos
-    $consulta_valoracion = "SELECT * FROM clientes, valoraciones WHERE clientes.id_cli = valoraciones.id_cli;";
     $consulta_resultado =  $conn->query($consulta_valoracion);
     $cont1 = $consulta_resultado->num_rows;
 
