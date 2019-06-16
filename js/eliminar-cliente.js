@@ -17,6 +17,6 @@ function enviar(id) {
                 window.location.replace("temp-clientesreg.php");
             }
         }
-    })
+    });
 }
 
