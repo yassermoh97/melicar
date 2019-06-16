@@ -8,7 +8,7 @@
 
 require_once 'cliente.php';
 
-# Datos recogidos del formulario de registro
+// Enviados a través de Ajax
 $nombre = $_POST['r_nombre'];
 $apellidos = $_POST['r_apellidos'];
 $telefono = $_POST['r_telefono'];
@@ -21,10 +21,13 @@ $direccion = $_POST['r_direccion'];
 $numero = $_POST['r_numero'];
 $postal = $_POST['r_codigo_postal'];
 
+// Creación del objeto y almacenamiento en una variable
 $user = new Cliente();
+
+// Ejecutar el método de la clase
 $register = $user->reg_cliente($nombre, $apellidos, $telefono, $email, $usuario, $pass, $pais, $ciudad, $direccion, $numero, $postal);
 
-
+// Mensajes de error
 if (!($user == false)) {
   
     
