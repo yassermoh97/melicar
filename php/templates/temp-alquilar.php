@@ -23,6 +23,8 @@
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         
+        <!-- Javascript 
+        <script type="text/javascript" src="../../js/filtrar-vehiculos.js"></script>-->
         
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="../../css/styles.css">
@@ -33,8 +35,15 @@
        
         <?php include 'temp-header.php'; ?>
         
-           
-        
+        <div id="filtro1"> 
+            <form action="temp-alquilar.php" method="POST">
+                <select id="filtrar" name="filtrar" onchange="">
+                    <option value="2">Precio: Más bajo</option>
+                    <option value="1">Precio: Más alto</option>
+                </select>
+                <input type="submit" id="filt1" name="filt" value="FILTRAR">
+            </form>
+        </div>
 <?php
     $servername = "localhost";
     $username = "yasser";
@@ -49,15 +58,30 @@
         die("Connection failed: " . $conn->connect_error);
     }
     
-    if (isset($_POST['search-btn'])) {
+    
         
         $fecha1 = $_POST['option-date1'];
         $fecha2 = $_POST['option-date2'];
         $hora1 = $_POST['option-time1'];
         $hora2 = $_POST['option-time2'];
         
+        if (!isset($_POST['filtrar'])) {
+            
+            // Consulta a la base de datos
+            $consulta_reserva = "SELECT * FROM vehiculos WHERE estado_veh = 'disponible'";
+          
+        } else {
+            if ($_POST['filtrar'] == 1) {
+                $consulta_reserva = "SELECT * FROM vehiculos WHERE estado_veh = 'disponible' ORDER BY precio_veh DESC";
+            }
+            if ($_POST['filtrar'] == 2) {
+                $consulta_reserva = "SELECT * FROM vehiculos WHERE estado_veh = 'disponible' ORDER BY precio_veh ASC";
+            }
+        }
+            
+
         // Consulta a la base de datos
-        $consulta_reserva = "SELECT * FROM vehiculos WHERE estado_veh = 'disponible'";
+        //$consulta_reserva = "SELECT * FROM vehiculos WHERE estado_veh = 'disponible'";
         $consulta_resultado1 =  $conn->query($consulta_reserva);
         $cont1 = $consulta_resultado1->num_rows;
         
@@ -113,14 +137,6 @@
              
         }
 ?>
-                 
-        
-<?php                  
-    }
-            
-         
-        //} 
-?> 
         
         <div id="separador">
             <p></p>
