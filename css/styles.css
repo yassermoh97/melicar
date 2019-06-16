@@ -32,7 +32,7 @@ body {
 
 .nav-link, .nav-link:hover {
     color: white;
-    font-size: 13px;
+    font-size: 15px;
     height: 60px;
     padding-top: 20px;
 }
@@ -336,7 +336,11 @@ hr {
 
 .info-footer {
     color: white;
-    font-size: 13px;
+    font-size: 15px;
+}
+
+.info-footer a {
+    color: white;
 }
 
 
@@ -797,6 +801,27 @@ tr, td, th {
     margin-left: 5%;
 }
 
+#filtro1 {
+    float: right;
+    margin-right: 7%;
+    margin-top: 30px;
+}
+
+#filt1 {
+    background-image: linear-gradient(#D72323, #A11414);
+    color: white;
+    font-size: 13px;
+    height: 30px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 2px 2px 3px black;
+    border-radius: 20px;
+    border: none
+}
+
+#filt1:hover {
+    background-image: linear-gradient(#950F0F, #950F0F);
+}
 
 
 /*----------------------------------------------------------------
@@ -945,4 +970,95 @@ tr, td, th {
     margin-top: 10px;
 }
 
+#filtro2 {
+    margin-left: 61%;
+    margin-top: 30px;
+    margin-bottom: 30px
+}
 
+#regist_opinion {
+    width: 100%;
+}
+
+#filt2 {
+    background-image: linear-gradient(#D72323, #A11414);
+    color: white;
+    font-size: 13px;
+    height: 30px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 2px 2px 3px black;
+    border-radius: 20px;
+    border: none
+}
+
+#filt2:hover {
+    background-image: linear-gradient(#950F0F, #950F0F);
+}
+
+
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+
+
+/* Estilos aplicados a temp-reservasreg.php */
+
+.tabla_reservas {
+    text-align: center;
+    margin-bottom: 300px;
+    margin-right: 20px;
+}
+
+.titulo-dispo {
+    margin-top: 30px;
+    color: #303841;
+}
+
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+
+
+/* Estilos aplicados a temp-sitemap.php */
+
+#sitemap {
+    margin-top: 30px;
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+
+
+/* Estilos aplicados a Breadcrumb */
+
+.breadcrumb {
+    background-color: #3A4750;
+    border-radius: 0px;
+}
+
+.breadcrumb a  {
+    color: white;
+}
+
+.breadcrumb-item {
+    color: #959595;
+}
