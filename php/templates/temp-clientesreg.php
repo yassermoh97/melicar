@@ -18,8 +18,17 @@
     </head>
     
     <body>
-        <!-- Llamada a archivos -->
+        <!-- Archivos incluidos -->
         <?php include 'temp-header.php'; ?>
+        
+        <!-- Migas de pan -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="temp-index.php">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="temp-adperfil.php">Tu perfil</a></li>
+                <li class="breadcrumb-item" aria-current="page">Clientes registrados</li>
+            </ol>
+        </nav>
         
         <?php
             session_start();
@@ -63,6 +72,7 @@
     $consulta_vehiculo = "SELECT * FROM clientes WHERE usuario_cli != 'admin'";
     $consulta_resultado =  $conn->query($consulta_vehiculo);
     
+    // Comprobar coincidencias en la consulta
     if ($consulta_resultado->num_rows > 0) {
     ?>
             <div class="col-xs-12 col-md-10 col-xl-10">
@@ -81,6 +91,8 @@
                         <th>Acción</th>
                     </tr>
     <?php
+        
+        // Almacenar los datos de la consulta en un array asociativo
         while ($row = $consulta_resultado->fetch_assoc()) {
             $id_cliente = $row['id_cli'];
     ?>
