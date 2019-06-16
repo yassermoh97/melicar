@@ -22,6 +22,7 @@ body {
     -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+    width: 104%;
 }
 
 #menu-icon {
@@ -47,15 +48,34 @@ body {
     padding: 20px;
 }
 
-.nav-link-perfil, .nav-link-perfil:hover {
+/*.nav-link-perfil, .nav-link-perfil:hover {
     color: white;
     font-size: 13px;
     height: 60px;
     padding-top: 20px;
+    margin-right: 80px;
 }
 
 .nav-link-perfil:focus {
     color: white;
+}*/
+
+.bt-perfil {
+    color: white;
+    font-size: 12px;
+    background-image: linear-gradient(#D72323, #A11414);
+    font-weight: 600;
+    width: 60%;
+    margin-right: 80px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width: 170px;
+    border-radius: 30px;
+    height: 50px;
+}
+
+.bt-perfil:hover {
+    background-image: linear-gradient(#950F0F, #950F0F);
 }
 
 .dropdown-item {
@@ -67,8 +87,8 @@ body {
 }
 
 #logotipo {
-    width: 120px;
-    height: 80px;
+    width: 170px;
+    height: 110px;
     margin-right: 30px;
 }
 
@@ -88,6 +108,22 @@ hr {
     border-color: #D72323;
 }
 
+#cerrarsesion {
+    color: white;
+    font-size: 12px;
+    background-image: linear-gradient(#D72323, #A11414);
+    font-weight: 600;
+    width: 60%;
+    margin-right: 80px;
+    margin-left: 20px;
+    width: 170px;
+    border-radius: 30px;
+    height: 50px;
+}
+
+#cerrarsesion:hover {
+    background-image: linear-gradient(#950F0F, #950F0F);
+}
 
 /*----------------------------------------------------------------
 ----------------------------------------------------------------
@@ -170,7 +206,7 @@ hr {
 
 #back {
     background-color: #D72323;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     background-image: url("../images/back.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -187,9 +223,8 @@ hr {
 }
 
 .search-control {
-    margin-top: 10px;
     color: white;
-    font-size: 13px;
+    font-size: 16px;
     text-decoration: underline #D72323;
 }
 
@@ -210,9 +245,9 @@ hr {
 }
 
 #search-btn {
-   width: 50%;
+   width: 90%;
    height: 40px;
-   margin-left: 25%;
+   margin-left: 5%;
    margin-top: 20px;
    background-image: linear-gradient(#D72323, #A11414);
    color: white;
@@ -273,7 +308,7 @@ hr {
 
 #page-footer {
    /* background-color: #D72323;*/
-    background-image: linear-gradient(#A11414, #D72323);
+    background-image: linear-gradient(#D72323, #A11414);
     width: 104%;
     -webkit-box-shadow: 1px -1px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px -1px 5px 0px rgba(0,0,0,0.75);
@@ -359,11 +394,11 @@ hr {
     font-size: 13px;
 }
 
-#regist-numero, #regist-puerta {
+#regist_numero, #regist_puerta {
     width: 10%;
 }
 
-#regist-postal {
+#regist_postal {
     width: 15%;
 }
 
@@ -384,6 +419,11 @@ hr {
     background-image: linear-gradient(#950F0F, #950F0F);
 }
 
+.mensaje {
+    font-size: 12px;
+    color: red;
+    margin-left: 20%;
+}
 
 
 /*----------------------------------------------------------------
@@ -418,6 +458,7 @@ hr {
 
 .title-car {
     margin-top: 30px;
+    margin-left: 5%;
 }
 
 #image-plazas, #image-cambio, #image-combustible, #image-maletas, #image-puertas {
@@ -486,7 +527,7 @@ hr {
 }
 
 .info-cobertura {
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .title-cobertura, .info-cobertura {
@@ -541,3 +582,367 @@ hr {
     width: 100%;
     height: 300px;
 }
+
+
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+
+
+/* Estilos aplicados a modales */
+
+.modal-content {
+    background-color: #3A4750;
+}
+
+.modal-title {
+    color: white;
+}
+
+
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+
+
+/* Estilos aplicados a temp-navertical.php */
+
+
+
+.config {
+    background-color: #3A4750;
+    box-shadow: 2px 2px 3px black;
+    padding: 20px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 105px;
+}
+
+.title-config {
+    color: white;
+    margin-left: 20px;
+}
+
+.nav-config {
+    color: white;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.nav-config:hover {
+    color: white;
+    margin-top: 20px;
+    margin-left: 10px;
+    text-decoration: underline;
+}
+
+#btn-modif1, #btn-modif2 {
+    margin-bottom: 200px;
+    margin-left: 70px;
+    background-image: linear-gradient(#D72323, #A11414);
+    color: white;
+    font-size: 13px;
+    width: 160px;
+    height: 40px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 2px 2px 3px black;
+    margin-top: 20px;
+}
+
+#btn-modif1:hover {
+    background-image: linear-gradient(#950F0F, #950F0F);
+}
+
+#btn-modif2:hover {
+    background-image: linear-gradient(#950F0F, #950F0F);
+}
+
+
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+
+
+/* Estilos aplicados a temp-regvehiculos.php */
+
+
+#btn-regveh {
+    margin-bottom: 200px;
+    margin-left: 70px;
+    background-image: linear-gradient(#D72323, #A11414);
+    color: white;
+    font-size: 13px;
+    width: 160px;
+    height: 40px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 2px 2px 3px black;
+    margin-top: 20px;
+}
+
+#btn-regveh:hover {
+    background-image: linear-gradient(#950F0F, #950F0F);
+}
+
+
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+
+
+/* Estilos aplicados a temp-vehiculosreg.php */
+
+.tabla_vehiculos, tr, td, th {
+    border: 1px solid black;
+    background-color: white;
+}
+
+.tabla_vehiculos {
+    text-align: center;
+    margin-bottom: 300px;
+    margin-right: 20px;
+}
+
+tr, td, th {
+    padding: 10px;
+}
+
+.eliminar {
+    background-color: #3A4750;
+    color: white;
+    font-size: 13px;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 2px 2px 3px black;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    border: none;
+}
+
+.eliminar:hover {
+    background-image: linear-gradient(#950F0F, #950F0F);
+}
+
+.ocult {
+    visibility: hidden;
+}
+
+
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+
+/* Estilos aplicados a temp-alquilar.php */
+
+.alquilar-btn {
+    margin-left: 60%;
+    margin-top: 50%;
+    margin-bottom: 20px;
+    background-image: linear-gradient(#D72323, #A11414);
+    color: white;
+    font-size: 13px;
+    width: 30%;
+    height: 40px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 2px 2px 3px black;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: none;
+};
+
+.alquilar-btn:hover {
+    background-image: linear-gradient(#950F0F, #950F0F);
+}
+
+.tipo {
+    color: #D72323;
+    margin-top: 20px;
+    margin-left: 5%;
+}
+
+.precio-alquiler {
+    margin-left: 5%;
+}
+
+
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+
+/* Estilos aplicados a temp-reservar.php */
+
+#reser {
+    width: 70%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+}
+
+.titulo-reserva {
+    color: #D72323;
+    margin-top: 20px;
+}
+
+#separador {
+    margin-bottom: 500px;
+}
+
+#price {
+    margin-top: 30px;
+    margin-left: 55%;
+    color: #D72323;
+}
+
+.btn-pagar {
+    margin-bottom: 300px;
+    background-image: linear-gradient(#D72323, #A11414);
+    color: white;
+    font-size: 13px;
+    height: 40px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 2px 2px 3px black;
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+}
+
+.btn-pagar:hover {
+    background-image: linear-gradient(#950F0F, #950F0F);
+}
+
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+
+
+/* Estilos aplicados a temp-valoraciones.php */
+
+
+.valoracion {
+    width: 60%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.notaval {
+    margin-top: 15%;
+}
+
+.image-user {
+    width: 110px;
+    height: 110px;
+}
+    
+
+
+#btn-valorar {
+    margin-top: 30px;
+    background-image: linear-gradient(#D72323, #A11414);
+    color: white;
+    font-size: 13px;
+    height: 40px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 2px 2px 3px black;
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    margin-left: 30px;
+}
+
+#btn-valor {
+    margin-top: 30px;
+    background-image: linear-gradient(#D72323, #A11414);
+    color: white;
+    font-size: 13px;
+    height: 40px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 2px 2px 3px black;
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    margin-left: 30%;
+}
+
+#btn-valorar:hover, #btn-valor:hover {
+    background-image: linear-gradient(#950F0F, #950F0F);
+}
+
+#valor {
+    width: 40%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.regist-controlopi {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#cli {
+    margin-left: 10px;
+}
+
+#fecha {
+    margin-left: 10px;
+}
+
+.valoracio {
+    margin-top: 15%;
+}
+
+.tercero, .primero {
+    margin-top: 10px;
+}
+
+
