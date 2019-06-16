@@ -2,14 +2,16 @@
 
 require_once 'administrador.php';
 
-# Datos recogidos del formulario de registro
+// Enviados a través de Ajax
 $id = $_POST['idcli'];
 
-
+// Creación del objeto y almacenamiento en una variable
 $cli= new Administrador();
+
+// Ejecutar el método de la clase
 $register = $cli->elim_cliente($id);
 
-
+// Mensajes de error 
 if (!($cli == false)) {
   
     
