@@ -62,4 +62,22 @@
             $result = mysqli_query($this->db,$sql1) or die(mysqli_connect_errno()."Data cannot inserted");     
             return $result;
         }
+        
+        
+        public function reservar($cli, $veh, $fecha_en, $hora1_en, $fecha_de, $hora2_de) {
+            
+            $sql1 = "INSERT INTO reserva (id_cli, id_veh, fecha_entrega, hora_entrega, fecha_devolucion, hora_devolucion) VALUES ($cli, $veh, \"$fecha_en\", \"$hora1_en\", \"$fecha_de\", \"$hora2_de\")";
+            $sql2 = "UPDATE vehiculos SET estado_veh='alquilado' WHERE id_veh=$veh";
+            $result1 = mysqli_query($this->db,$sql1) or die(mysqli_connect_errno()."Data cannot inserted");  
+            $result2 = mysqli_query($this->db,$sql2) or die(mysqli_connect_errno()."Data cannot inserted"); 
+            return $result1;
+        }
+        
+        public function valorar($cli, $opinion, $puntuacion) {
+            
+            $sql1 = "INSERT INTO valoraciones (id_cli, opinion_val, puntuacion_val) VALUES ($cli, \"$opinion\", \"$puntuacion\")";
+              
+            $result = mysqli_query($this->db,$sql1) or die(mysqli_connect_errno()."Data cannot inserted"); 
+            return $result;
+        }
     }
