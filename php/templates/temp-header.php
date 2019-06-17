@@ -61,6 +61,11 @@
                             VALORAR
                         </a>
                     </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="temp-rss.php" id="navbardrop4">
+                            RSS
+                        </a>
+                    </li>
                 </ul>
 
                 <!-- Link perfil -->
