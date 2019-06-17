@@ -81,20 +81,24 @@
     // Comprobación de coincidencias
     if ($consulta_resultado1->num_rows > 0) {
         
+    ?>
+    
+        <div class="col-xs-12 col-md-10 col-xl-10">
+            <table class="tabla_reservas">
+                <tr>
+                    <th>Fecha de entrega</th>
+                    <th>Hora de entrega</th>
+                    <th>Fecha de devolución</th>
+                    <th>Hora de devolución</th>
+                    <th>Acción</th>
+                </tr>
+            
+    <?php
         // Almacenamiento de resultados en array asociativo
         while ($row = $consulta_resultado1->fetch_assoc()) {
             $id_re = $row['id_res'];
     ?>
             
-                <div class="col-xs-12 col-md-10 col-xl-10">
-                    <table class="tabla_reservas">
-                        <tr>
-                            <th>Fecha de entrega</th>
-                            <th>Hora de entrega</th>
-                            <th>Fecha de devolución</th>
-                            <th>Hora de devolución</th>
-                            <th>Acción</th>
-                        </tr>
                         <tr>
                             <td><?php echo $row['fecha_entrega']; ?></td>
                             <td><?php echo $row['hora_entrega']; ?></td>
@@ -108,13 +112,17 @@
                             CANCELAR
                             </button></td>                 
                         </tr>            
-                    </table>              
-                </div>
+                                
+                
 <?php    
             
-        } 
+        }
+?>
+        </table>              
+<?php         
     } else {
 ?>
+            </div>
             <div class="col-xs-12 col-md-10 col-xl-10">
                 <h2 class="titulo-dispo">No hay reservas disponibles</h2>
             </div>
