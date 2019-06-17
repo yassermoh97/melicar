@@ -107,6 +107,8 @@
                                 
                                 <h2 id="price">PRECIO <?php echo $coche['precio_veh']; ?>€ / día</h2>
                         </div>
+                    </div>
+                </div>
                 <!-- Datos que se envían tras hacer una reserva -->
                 <form action="../clases/reserva.php" method="POST">
                     <input type="number" class="ocult"  name="veh_id" id="veh_id" value="<?php echo $id_cars;  ?>">
@@ -121,6 +123,7 @@
             }
     ?>
         
+                    
         <!-- Archivos inluidos -->                  
         <?php include 'temp-footer.php'; ?>
         
